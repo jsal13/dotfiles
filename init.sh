@@ -59,6 +59,8 @@ sudo apt install -y peek
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep 
 
 # github
+git config --global user.email "jimmy.c.salvatore@gmail.com"
+git config --global user.name "James Salvatore"
 ssh-keygen -q -t rsa -b 4096 -C "jimmy.c.salvatore@gmail.com" -N "" -f /home/james/.ssh/id_rsa
 echo "REMEMBER TO PUT YOUR KEY ON GITHUB."
 
@@ -69,3 +71,6 @@ cd Projects \
     && git clone ssh://git@github.com/jsal13/dotfiles \
     # you have to "yes" here once \
     
+
+# zshell.
+# copy zshell stuff.
