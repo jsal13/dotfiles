@@ -18,6 +18,8 @@ sudo apt-get update -y && sudo apt-get install -y \
     obs-studio \
     terminator \
     peek \
+    default-jre \
+    default-jdk \
     libgl1-mesa-dri:i386 \
     libgl1-mesa-glx:i386
 
@@ -80,6 +82,10 @@ wget http://media.steampowered.com/client/installer/steam.deb
 sudo gdebi -n steam.deb
 rm -rf steam.deb
 
+# minecraft
+wget -o ~/Minecraft.deb https://launcher.mojang.com/download/Minecraft.deb
+sudo gdebi -y ~/Minecraft.deb.1
+
 # github
 git config --global user.email "jimmy.c.salvatore@gmail.com"
 git config --global user.name "James Salvatore"
@@ -98,5 +104,6 @@ cd $HOME/Projects \
 echo "** Done!  Now do the following: "
 echo "**   + https://help.ubuntu.com/community/SettingUpConky#Set_Conky_To_Start_At_Boot"
 echo "**   + https://www.nvidia.com/Download/index.aspx?lang=en-us"
+echo "**   + For nvidia, disable Nouveau: https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver"
 echo "**   + Go into another terminal and run 'chsh -s /bin/zsh' and '. ~/.zshrc'"
 
