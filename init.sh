@@ -4,6 +4,8 @@ sudo add-apt-repository -y ppa:gnome-terminator
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:peek-developers/stable
 
+sudo dpkg --add-architecture i386 && sudo apt update
+
 sudo apt-get update -y && sudo apt-get install -y \
     curl \
     git \ 
@@ -15,7 +17,9 @@ sudo apt-get update -y && sudo apt-get install -y \
     zsh \
     obs-studio \
     terminator \
-    peek
+    peek \
+    libgl1-mesa-dri:i386 \
+    libgl1-mesa-glx:i386
 
 curl -sL -o conky-x86_64.AppImage \
     $(curl -sL https://api.github.com/repos/brndnmtthws/conky/releases/latest | \
@@ -71,6 +75,11 @@ sudo apt-get install -y \
 
 sudo apt-get install -y higan
 
+# steam 
+wget http://media.steampowered.com/client/installer/steam.deb
+sudo gdebi -n steam.deb
+rm -rf steam.deb
+
 # github
 git config --global user.email "jimmy.c.salvatore@gmail.com"
 git config --global user.name "James Salvatore"
@@ -88,4 +97,6 @@ cd $HOME/Projects \
 
 echo "** Done!  Now do the following: "
 echo "**   + https://help.ubuntu.com/community/SettingUpConky#Set_Conky_To_Start_At_Boot"
+echo "**   + https://www.nvidia.com/Download/index.aspx?lang=en-us"
 echo "**   + Go into another terminal and run 'chsh -s /bin/zsh' and '. ~/.zshrc'"
+
