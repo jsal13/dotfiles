@@ -1,31 +1,14 @@
+# !/bin/bash 
+
 cd $HOME
 
-sudo add-apt-repository -y ppa:gnome-terminator
+sudo dpkg --add-architecture i386
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:peek-developers/stable
 
-sudo dpkg --add-architecture i386 && sudo apt update
+sudo apt install curl jq -y
+sudo apt-get install -y curl git gdebi-core vim ack-grep jq zsh obs-studio conky-all terminator peek default-jre default-jdk libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
 
-sudo apt-get update -y && sudo apt-get install -y \
-    curl \
-    git \ 
-    gdebi-core \
-    wget \
-    vim \
-    ack-grep \ 
-    jq \
-    zsh \
-    obs-studio \
-    terminator \
-    peek \
-    default-jre \
-    default-jdk \
-    libgl1-mesa-dri:i386 \
-    libgl1-mesa-glx:i386
-
-curl -sL -o conky-x86_64.AppImage \
-    $(curl -sL https://api.github.com/repos/brndnmtthws/conky/releases/latest | \
-    jq --raw-output '.assets[0] | .browser_download_url')
 
 sudo snap install discord --classic
 sudo snap install slack --classic
@@ -43,7 +26,9 @@ rm -rf $HOME/anaconda.sh
 
 # brave browser beta
 curl -s https://brave-browser-apt-beta.s3.brave.com/brave-core-nightly.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-beta.gpg add -
-source /etc/os-release && echo "deb [arch=amd64] https://brave-browser-apt-beta.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-beta-${UBUNTU_CODENAME}.list
+. /etc/os-release
+echo "deb [arch=amd64] https://brave-browser-apt-beta.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-beta-${UBUNTU_CODENAME}.list
+sudo apt-get update -y
 sudo apt-get install -y brave-browser-beta
  
 #VSCode Configuration.
@@ -84,7 +69,11 @@ rm -rf steam.deb
 
 # minecraft
 wget -o ~/Minecraft.deb https://launcher.mojang.com/download/Minecraft.deb
-sudo gdebi -y ~/Minecraft.deb.1
+sudo dpkg -i ~/Minecraft.deb.1
+
+# Cleaning
+sudo apt autoremove -y
+sudo apt-get clean -y
 
 # github
 git config --global user.email "jimmy.c.salvatore@gmail.com"
@@ -106,4 +95,3 @@ echo "**   + https://help.ubuntu.com/community/SettingUpConky#Set_Conky_To_Start
 echo "**   + https://www.nvidia.com/Download/index.aspx?lang=en-us"
 echo "**   + For nvidia, disable Nouveau: https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver"
 echo "**   + Go into another terminal and run 'chsh -s /bin/zsh' and '. ~/.zshrc'"
-
