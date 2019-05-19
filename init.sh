@@ -7,7 +7,7 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:peek-developers/stable
 
 sudo apt install curl jq -y
-sudo apt-get install -y curl git gdebi-core vim ack-grep jq zsh obs-studio terminator conky-all peek default-jre default-jdk libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
+sudo apt-get install -y curl git node npm gdebi-core vim ack-grep jq zsh obs-studio terminator conky-all peek default-jre default-jdk libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
 
 sudo snap install discord --classic
 sudo snap install slack --classic
