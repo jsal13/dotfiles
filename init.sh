@@ -6,16 +6,21 @@ sudo dpkg --add-architecture i386
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:peek-developers/stable
 
-sudo apt install curl jq -y
-sudo apt-get install -y curl git node npm gdebi-core vim ack-grep jq zsh obs-studio terminator conky-all peek default-jre default-jdk libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
+sudo apt install curl jq git nodejs npm gdebi-core vim zsh-y
+sudo apt-get install -y obs-studio terminator conky-all libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
+
+# Sometimes these error out due to a conflict.
+sudo apt-get install -y default-jre default-jdk
 
 sudo snap install discord --classic
 sudo snap install slack --classic
 
 # ack fix
+sudo apt-get install -y ack-grep
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep 
 
 # oh-my-zsh
+# TODO: Sometimes not getting installed?
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -e 's/^\s*chsh -s/sudo chsh -s/g' -e 's/^\s*env\szsh.*$/#/g')"
 
 # Python -- maybe change version here.
@@ -69,7 +74,8 @@ rm -rf steam.deb
 
 # minecraft
 wget -o ~/Minecraft.deb https://launcher.mojang.com/download/Minecraft.deb
-sudo dpkg -i ~/Minecraft.deb
+sudo dpkg -i ~/Minecraft.deb.1
+rm -rf ~/Minecraft.deb*
 
 # Cleaning
 sudo apt autoremove -y
