@@ -44,6 +44,7 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.code-runner
 code --install-extension formulahendry.auto-close-tag
 code --install-extension 2gua.rainbow-brackets
+code --install-extension yummygum.city-lights-theme
 
 # for higan
 sudo apt-get install -y \ 
