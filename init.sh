@@ -14,6 +14,7 @@ sudo apt-get install -y default-jre default-jdk
 
 sudo snap install discord --classic
 sudo snap install slack --classic
+sudo snap install vlc --classic
 
 # ack fix
 sudo apt-get install -y ack-grep
