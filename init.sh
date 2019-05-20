@@ -5,9 +5,9 @@ cd $HOME
 sudo dpkg --add-architecture i386
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:peek-developers/stable
-curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-sudo apt install curl jq git nodejs npm gdebi-core vim zsh-y p7zip-full
+sudo apt install curl jq git gcc g++ make nodejs gdebi-core vim zsh-y p7zip-full
 sudo apt-get install -y obs-studio terminator conky-all libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
 sudo apt-get install fonts-noto-color-emoji  # emoji support
 # Sometimes these error out due to a conflict.
