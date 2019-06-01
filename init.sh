@@ -3,13 +3,23 @@
 cd $HOME
 
 sudo dpkg --add-architecture i386
+
+sudo apt install curl jq git gcc g++ make nodejs gdebi-core vim zsh-y p7zip-full apt-transport-https gnupg-agent
+
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo add-apt-repository -y ppa:peek-developers/stable
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-sudo apt install curl jq git gcc g++ make nodejs gdebi-core vim zsh-y p7zip-full
+# docker: disco dist for ubuntu 19 hardcoded here.
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco test"
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 sudo apt-get install -y obs-studio terminator conky-all libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
-sudo apt-get install fonts-noto-color-emoji  # emoji support
+sudo apt-get install -y fonts-noto-color-emoji  # emoji support
+
 # Sometimes these error out due to a conflict.
 sudo apt-get install -y default-jre default-jdk
 
