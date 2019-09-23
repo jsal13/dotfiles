@@ -1,31 +1,46 @@
 # !/bin/bash 
-
 cd $HOME
 
 sudo dpkg --add-architecture i386
 
-sudo apt install curl jq git gcc g++ make nodejs gdebi-core vim zsh-y p7zip-full apt-transport-https gnupg-agent
+sudo apt-get install -y \
+    apt-transport-https \
+    curl \
+    g++ \
+    gdebi-core \
+    gcc \
+    git \
+    gnupg-agent \
+    jq \
+    make \
+    p7zip-full \ 
+    vim \ 
+    zsh
 
-sudo add-apt-repository -y ppa:obsproject/obs-studio
+# Best snipping tool on there.
 sudo add-apt-repository -y ppa:peek-developers/stable
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # docker: disco dist for ubuntu 19 hardcoded here.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco test"
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) test"   
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-sudo apt-get install -y obs-studio terminator conky-all libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
+sudo apt-get install -y terminator conky-all libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
 sudo apt-get install -y fonts-noto-color-emoji  # emoji support
 
 # Sometimes these error out due to a conflict.
 sudo apt-get install -y default-jre default-jdk
 
+# Snap installs
+sudo snap install obs-studio
 sudo snap install discord --classic
 sudo snap install slack --classic
 sudo snap install vlc --classic
+sudo snap install node --channel=12/stable --classic
 
 # ack fix
 sudo apt-get install -y ack-grep
@@ -36,16 +51,9 @@ sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -e 's/^\s*chsh -s/sudo chsh -s/g' -e 's/^\s*env\szsh.*$/#/g')"
 
 # Python -- maybe change version here.
-curl https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh -o $HOME/anaconda.sh
+curl https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh -o $HOME/anaconda.sh
 bash $HOME/anaconda.sh -b -p $HOME/anaconda
 rm -rf $HOME/anaconda.sh
-
-# brave browser beta
-curl -s https://brave-browser-apt-beta.s3.brave.com/brave-core-nightly.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-beta.gpg add -
-. /etc/os-release
-echo "deb [arch=amd64] https://brave-browser-apt-beta.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-beta-${UBUNTU_CODENAME}.list
-sudo apt-get update -y
-sudo apt-get install -y brave-browser-beta
  
 #VSCode Configuration.
 wget https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable -O /tmp/code_latest_amd64.deb
@@ -64,20 +72,19 @@ code --install-extension 2gua.rainbow-brackets
 code --install-extension yummygum.city-lights-theme
 
 # for higan
-sudo apt-get install -y \ 
-    build-essential \
-    libgtk2.0-dev\
-    libpulse-dev \
-    mesa-common-dev \
-    libgtksourceview2.0-dev \
-    libcairo2-dev \
-    libsdl2-dev \
-    libxv-dev \
-    libao-dev \
-    libopenal-dev \
-    libudev-dev
-
-sudo apt-get install -y higan
+# sudo apt-get install -y \ 
+#     build-essential \
+#     libgtk2.0-dev\
+#     libpulse-dev \
+#     mesa-common-dev \
+#     libgtksourceview2.0-dev \
+#     libcairo2-dev \
+#     libsdl2-dev \
+#     libxv-dev \
+#     libao-dev \
+#     libopenal-dev \
+#     libudev-dev
+# sudo apt-get install -y higan
 
 # steam 
 wget http://media.steampowered.com/client/installer/steam.deb
