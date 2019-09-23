@@ -2,7 +2,7 @@
 cd $HOME
 
 sudo dpkg --add-architecture i386
-
+sudo apt-get update 
 sudo apt-get install -y \
     apt-transport-https \
     curl \
@@ -13,13 +13,12 @@ sudo apt-get install -y \
     gnupg-agent \
     jq \
     make \
-    p7zip-full \ 
-    vim \ 
-    zsh
+    p7zip-full
+sudo apt install -y vim zsh
 
 # Best snipping tool on there.
 sudo add-apt-repository -y ppa:peek-developers/stable
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get -y peek
 
 # docker: disco dist for ubuntu 19 hardcoded here.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -107,8 +106,8 @@ ssh-keygen -q -t rsa -b 4096 -C "jimmy.c.salvatore@gmail.com" -N "" -f /home/jam
 
 read -p "** PUT YOUR KEY ON GITHUB, then press enter.  You will need to also accept github's fingerprint shortly."
 
-mkdir -p $HOME/Projects
-cd $HOME/Projects \
+mkdir -p $HOME/repos
+cd $HOME/repos \
     && git clone ssh://git@github.com/jsal13/dotfiles \
     && cp dotfiles/zsh/.zshrc $HOME/.zshrc \
     && cp dotfiles/conky/.conkyrc $HOME/.conkyrc \
