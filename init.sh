@@ -18,7 +18,7 @@ sudo apt install -y vim zsh
 
 # Best snipping tool on there.
 sudo add-apt-repository -y ppa:peek-developers/stable
-sudo apt-get -y peek
+sudo apt-get -y install peek
 
 # docker: disco dist for ubuntu 19 hardcoded here.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
