@@ -92,6 +92,11 @@ sudo gdebi -n steam.deb
 rm -rf steam.deb
 
 # minecraft
+sudo apt-get instally -y \
+    libgtk2.0-0 \
+    gconf-service \
+    libpango1.0-0
+    
 wget -o ~/Minecraft.deb https://launcher.mojang.com/download/Minecraft.deb
 sudo dpkg -i ~/Minecraft.deb.1
 rm -rf ~/Minecraft.deb*
