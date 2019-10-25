@@ -6,10 +6,12 @@ sudo apt-get update
 sudo apt-get install -y \
     apt-transport-https \
     curl \
+    fonts-firacode \
     g++ \
     gdebi-core \
     gcc \
     git \
+    gnome-tweak-tool \
     gnupg-agent \
     jq \
     make \
@@ -122,6 +124,4 @@ cd $HOME/repos \
 
 echo "** Done!  Now do the following: "
 echo "**   + https://help.ubuntu.com/community/SettingUpConky#Set_Conky_To_Start_At_Boot"
-echo "**   + https://www.nvidia.com/Download/index.aspx?lang=en-us"
-echo "**   + For nvidia, disable Nouveau: https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver"
 echo "**   + Go into another terminal and run 'chsh -s /bin/zsh' and '. ~/.zshrc'"
