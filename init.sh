@@ -13,8 +13,9 @@ sudo apt-get install -y \
     gnupg-agent \
     jq \
     make \
-    p7zip-full
-sudo apt install -y vim zsh
+    p7zip-full \
+    vim \
+    zsh
 
 # Best snipping tool on there.
 sudo add-apt-repository -y ppa:peek-developers/stable
