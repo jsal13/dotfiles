@@ -50,7 +50,7 @@ sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -e 's/^\s*chsh -s/sudo chsh -s/g' -e 's/^\s*env\szsh.*$/#/g')"
 
 # Python -- maybe change version here.
-curl https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh -o $HOME/anaconda.sh
+curl https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -o $HOME/anaconda.sh
 bash $HOME/anaconda.sh -b -p $HOME/anaconda
 rm -rf $HOME/anaconda.sh
  
