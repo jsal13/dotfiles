@@ -18,7 +18,6 @@ Get-AppxPackage -name "Microsoft.WindowsMaps" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.MicrosoftOfficeHub" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.BingWeather" | Remove-AppxPackage
-Get-AppxPackage -name "Microsoft.WindowsStore" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Windows.Photos" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.WindowsPhone" | Remove-AppxPackage
 
