@@ -1,29 +1,64 @@
-# The rest
-choco install 7zip
-choco install adobereader
-choco install anaconda3
-choco install battle.net
-choco install brave
-choco install calibre
-choco install ccleaner
-choco install conemu
-choco install deluge
-choco install discord
-choco install docker-desktop
-choco install firacode
-choco install firefox
-choco install git
-choco install minecraft
-choco install nodejs
-choco install paint.net
-choco install putty
-choco install rufus
-choco install skype
-choco install slack
-choco install spotify
-choco install spybot
-choco install steam
-choco install vlc
-choco install vscode
+Get-AppxPackage -name "Microsoft.ZuneMusic" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.Music.Preview" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.XboxIdentityProvider" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingTravel" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingHealthAndFitness" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingFoodAndDrink" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.People" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingFinance" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.3DBuilder" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.WindowsCalculator" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingNews" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.XboxApp" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingSports" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.WindowsCamera" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.Getstarted" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.Office.OneNote" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.WindowsMaps" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.MicrosoftOfficeHub" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.BingWeather" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.WindowsStore" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.Windows.Photos" | Remove-AppxPackage
+Get-AppxPackage -name "Microsoft.WindowsPhone" | Remove-AppxPackage
 
-# Virtualbox, SLobs
+exit
+
+choco install -y 7zip
+choco install -y adobereader
+choco install -y brave
+choco install -y calibre
+choco install -y ccleaner
+choco install -y conemu
+choco install -y deluge
+choco install -y discord
+choco install -y docker-desktop
+choco install -y firacode #!!
+choco install -y git
+choco install -y minecraft
+choco install -y nodejs
+choco install -y paint.net
+choco install -y putty
+choco install -y rufus
+choco install -y skype
+choco install -y slack
+choco install -y spotify
+choco install -y spybot
+choco install -y steam
+choco install -y vlc
+choco install -y vscode
+
+exit
+
+code --install-extension ms-python.python 
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension octref.vetur
+code --install-extension peterjausovec.vscode-docker
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.code-runner
+code --install-extension formulahendry.auto-close-tag
+code --install-extension 2gua.rainbow-brackets
+code --install-extension yummygum.city-lights-theme
+
+# Install anaconda 3.
