@@ -15,7 +15,6 @@ Get-AppxPackage -name "Microsoft.WindowsCamera" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Getstarted" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Office.OneNote" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.WindowsMaps" | Remove-AppxPackage
-Get-AppxPackage -name "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.MicrosoftOfficeHub" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.BingWeather" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Windows.Photos" | Remove-AppxPackage
