@@ -1,5 +1,7 @@
 # NVIDIA Context Menu Thing (right click in folders)
 # COPY in the Creds stuff.
+# See if solitaire works before this noise is cut out; if not, then add 
+# https://answers.microsoft.com/en-us/windows/forum/all/microsoft-solitaire-collection-keeps-crashing/967d320a-e999-4782-aed3-bb10072b4ece
 
 Get-AppxPackage -name "Microsoft.ZuneMusic" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Music.Preview" | Remove-AppxPackage
