@@ -3,6 +3,17 @@
 # See if solitaire works before this noise is cut out; if not, then add 
 # https://answers.microsoft.com/en-us/windows/forum/all/microsoft-solitaire-collection-keeps-crashing/967d320a-e999-4782-aed3-bb10072b4ece
 
+# TO HOSTS:
+# #solitaire_ad_block
+# 0.0.0.0 msmonplat.trafficmanager.net
+# 0.0.0.0 cdn.spotxcdn.com
+# 0.0.0.0 msmonplat.trafficmanager.net
+# 0.0.0.0 cdn.spotxcdn.com
+# 0.0.0.0 ads.api.vungle.com
+# 0.0.0.0 fp.msedge.net
+# 0.0.0.0 cdn.adnxs.com
+# 0.0.0.0 widgets.outbrain.com
+
 Get-AppxPackage -name "Microsoft.ZuneMusic" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Music.Preview" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.XboxIdentityProvider" | Remove-AppxPackage
