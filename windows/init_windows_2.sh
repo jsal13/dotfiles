@@ -44,6 +44,7 @@ choco install -y ccleaner
 choco install -y conemu
 choco install -y deluge
 choco install -y discord
+choco install -y docker-desktop
 choco install -y docker-cli 
 choco install -y docker-compose
 choco install -y firacode
