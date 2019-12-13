@@ -40,7 +40,6 @@ choco install -y 7zip
 choco install -y adobereader
 choco install -y brave
 choco install -y calibre
-choco install -y ccleaner
 choco install -y conemu
 choco install -y deluge
 choco install -y discord
