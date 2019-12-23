@@ -39,6 +39,7 @@ sudo apt-get install -y default-jre default-jdk
 
 # Snap installs
 sudo snap install obs-studio
+sudo snap install gimp --classic
 sudo snap install discord --classic
 sudo snap install slack --classic
 sudo snap install vlc --classic
