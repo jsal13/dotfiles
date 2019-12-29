@@ -95,7 +95,7 @@ sudo gdebi -n steam.deb
 rm -rf steam.deb
 
 # minecraft
-sudo apt-get instally -y \
+sudo apt-get install -y \
     libgtk2.0-0 \
     gconf-service \
     libpango1.0-0
