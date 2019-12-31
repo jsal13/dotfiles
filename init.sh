@@ -73,6 +73,7 @@ code --install-extension formulahendry.code-runner
 code --install-extension formulahendry.auto-close-tag
 code --install-extension 2gua.rainbow-brackets
 code --install-extension yummygum.city-lights-theme
+code --install-extension ms-azuretools.vscode-docker
 
 # for higan
 # sudo apt-get install -y \ 
