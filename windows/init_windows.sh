@@ -14,6 +14,11 @@
 # 0.0.0.0 cdn.adnxs.com
 # 0.0.0.0 widgets.outbrain.com
 
+# Install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+exit
+
 Get-AppxPackage -name "Microsoft.ZuneMusic" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Music.Preview" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.XboxIdentityProvider" | Remove-AppxPackage
