@@ -7,10 +7,3 @@ ZSH_THEME="avit"
 plugins=(git docker)
 
 source $ZSH/oh-my-zsh.sh
-
-alias please="sudo"
-alias pls="sudo"
-
-alias ga="git add"
-alias gc="git commit"
-alias gpo="git push origin"

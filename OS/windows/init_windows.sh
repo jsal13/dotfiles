@@ -63,6 +63,7 @@ choco install -y slack
 choco install -y spotify
 choco install -y spybot
 choco install -y steam
+choco install -y tor-browser
 choco install -y vlc
 choco install -y vscode
 
