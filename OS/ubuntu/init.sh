@@ -23,14 +23,20 @@ sudo apt-get install -y \
 sudo add-apt-repository -y ppa:peek-developers/stable
 sudo apt-get -y install peek
 
-# docker: disco dist for ubuntu 19 hardcoded here.
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) test"   
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# # docker: disco dist for ubuntu 19 hardcoded here.
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# sudo add-apt-repository \
+#    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) test"   
+# sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+# sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# sudo chmod +x /usr/local/bin/docker-compose
 
+# Docker
+sudo apt install -y docker.io
+sudo systemctl enable --now docker
+sudo usermod -aG docker james
+
+# Some others.
 sudo apt-get install -y terminator conky-all libgl1-mesa-dri:i386 libgl1-mesa-glx:i386
 sudo apt-get install -y fonts-noto-color-emoji  # emoji support
 
@@ -54,7 +60,7 @@ sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -e 's/^\s*chsh -s/sudo chsh -s/g' -e 's/^\s*env\szsh.*$/#/g')"
 
 # Python -- maybe change version here.
-curl https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -o $HOME/anaconda.sh
+curl https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -o $HOME/anaconda.sh
 bash $HOME/anaconda.sh -b -p $HOME/anaconda
 rm -rf $HOME/anaconda.sh
  
