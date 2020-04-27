@@ -80,6 +80,7 @@ code --install-extension formulahendry.auto-close-tag
 code --install-extension 2gua.rainbow-brackets
 code --install-extension yummygum.city-lights-theme
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension mtxr.sqltools
 
 
 # Install anaconda 3.
