@@ -225,7 +225,6 @@
   },
   "search.followSymlinks": true,
   "search.globalFindClipboard": false,
-  "search.location": "sidebar",
   "search.quickOpen.includeHistory": true,
   "search.quickOpen.includeSymbols": false,
   "search.runInExtensionHost": false,
