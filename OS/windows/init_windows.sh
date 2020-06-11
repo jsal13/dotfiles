@@ -43,44 +43,34 @@ exit
 
 choco install -y 7zip
 choco install -y adobereader
-choco install -y brave
 choco install -y calibre
+choco install -y googlechrome
 choco install -y conemu
 choco install -y deluge
 choco install -y discord
-choco install -y docker-desktop
-choco install -y docker-cli 
-choco install -y docker-compose
 choco install -y firacode
-choco install -y git
 choco install -y minecraft
-choco install -y nodejs
 choco install -y paint.net
-choco install -y putty
-choco install -y rufus
 choco install -y skype
 choco install -y slack
 choco install -y spotify
 choco install -y spybot
 choco install -y steam
-choco install -y tor-browser
 choco install -y vlc
 choco install -y vscode
 
 exit
 
-code --install-extension ms-python.python 
-code --install-extension vscode-icons-team.vscode-icons
+code --install-extension 2gua.rainbow-brackets
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.code-runner
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-python.python 
+code --install-extension mtxr.sqltools
 code --install-extension octref.vetur
 code --install-extension peterjausovec.vscode-docker
-code --install-extension esbenp.prettier-vscode
-code --install-extension formulahendry.code-runner
-code --install-extension formulahendry.auto-close-tag
-code --install-extension 2gua.rainbow-brackets
+code --install-extension vscode-icons-team.vscode-icons
 code --install-extension yummygum.city-lights-theme
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension mtxr.sqltools
-
-
-# Install anaconda 3.
