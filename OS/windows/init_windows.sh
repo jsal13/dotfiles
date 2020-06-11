@@ -50,6 +50,7 @@ choco install -y deluge
 choco install -y discord
 choco install -y firacode
 choco install -y minecraft
+choco install -y obs-studio
 choco install -y paint.net
 choco install -y skype
 choco install -y slack
