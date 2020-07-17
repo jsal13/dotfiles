@@ -29,7 +29,6 @@ Get-AppxPackage -name "Microsoft.People" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.BingFinance" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.3DBuilder" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.BingNews" | Remove-AppxPackage
-Get-AppxPackage -name "Microsoft.XboxApp" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.BingSports" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.WindowsCamera" | Remove-AppxPackage
 Get-AppxPackage -name "Microsoft.Getstarted" | Remove-AppxPackage
@@ -41,24 +40,7 @@ Get-AppxPackage -name "Microsoft.WindowsPhone" | Remove-AppxPackage
 
 exit
 
-choco install -y 7zip
-choco install -y adobereader
-choco install -y calibre
-choco install -y googlechrome
-choco install -y conemu
-choco install -y deluge
-choco install -y discord
-choco install -y firacode
-choco install -y minecraft
-choco install -y obs-studio
-choco install -y paint.net
-choco install -y skype
-choco install -y slack
-choco install -y spotify
-choco install -y spybot
-choco install -y steam
-choco install -y vlc
-choco install -y vscode
+choco install -y 7zip adobereader calibre googlechrome conemu deluge discord firacode gimp minecraft obs-studio paint.net slack spotify spybot steam vlc vscode
 
 exit
 
@@ -75,3 +57,8 @@ code --install-extension octref.vetur
 code --install-extension peterjausovec.vscode-docker
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension yummygum.city-lights-theme
+
+# You'll want to manually install:
+# - Docker
+# - Fruityloops
+# - GIMP
