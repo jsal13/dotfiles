@@ -128,7 +128,7 @@ mkdir -p $HOME/repos
 cd $HOME/repos \
     && git clone ssh://git@github.com/jsal13/dotfiles \
     && cp dotfiles/zsh/.zshrc $HOME/.zshrc \
-    && cp dotfiles/conky/.conkyrc $HOME/.conkyrc \
+    && cp dotfiles/OS/ubuntu/.conkyrc $HOME/.conkyrc \
     && git clone ssh://git@github.com/jsal13/swiss-chocolate-knife \
     && cd ..
 
