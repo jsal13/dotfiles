@@ -61,4 +61,3 @@ code --install-extension yummygum.city-lights-theme
 # You'll want to manually install:
 # - Docker
 # - Fruityloops
-# - GIMP
