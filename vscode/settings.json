@@ -585,9 +585,7 @@
   // The command line arguments to use when on the Linux terminal. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).
   "terminal.integrated.shellArgs.linux": [],
   // The command line arguments to use when on the macOS terminal. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).
-  "terminal.integrated.shellArgs.osx": [
-    "-l"
-  ],
+  "terminal.integrated.shellArgs.osx": ["-l"],
   // The command line arguments to use when on the Windows terminal. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).
   "terminal.integrated.shellArgs.windows": [],
   // Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.
@@ -649,9 +647,7 @@
   ],
   "auto-close-tag.fullMode": false,
   "[git-commit]": {
-    "editor.rulers": [
-      72
-    ]
+    "editor.rulers": [72]
   },
   "[go]": {
     "editor.insertSpaces": false
@@ -731,10 +727,7 @@
   "python.linting.flake8CategorySeverity.W": "Warning",
   "python.linting.flake8Enabled": false,
   "python.linting.flake8Path": "flake8",
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py"
-  ],
+  "python.linting.ignorePatterns": [".vscode/*.py", "**/site-packages/**/*.py"],
   "python.linting.lintOnSave": true,
   "python.linting.maxNumberOfProblems": 100,
   "python.linting.mypyArgs": [
@@ -785,25 +778,13 @@
   "python.unitTest.pyTestArgs": [],
   "python.unitTest.pyTestEnabled": false,
   "python.unitTest.pyTestPath": "pytest",
-  "python.unitTest.unittestArgs": [
-    "-v",
-    "-s",
-    ".",
-    "-p",
-    "*test*.py"
-  ],
+  "python.unitTest.unittestArgs": ["-v", "-s", ".", "-p", "*test*.py"],
   "python.unitTest.unittestEnabled": false,
-  "python.venvFolders": [
-    "envs",
-    ".pyenv",
-    ".direnv"
-  ],
+  "python.venvFolders": ["envs", ".pyenv", ".direnv"],
   "python.venvPath": "",
   "python.workspaceSymbols.ctagsPath": "ctags",
   "python.workspaceSymbols.enabled": true,
-  "python.workspaceSymbols.exclusionPatterns": [
-    "**/site-packages/**"
-  ],
+  "python.workspaceSymbols.exclusionPatterns": ["**/site-packages/**"],
   "python.workspaceSymbols.rebuildOnFileSave": true,
   "python.workspaceSymbols.rebuildOnStart": true,
   "python.workspaceSymbols.tagFilePath": "${workspaceFolder}/.vscode/tags",
@@ -871,9 +852,7 @@
   "docker.showExplorer": true,
   "docker.truncateLongRegistryPaths": false,
   "docker.truncateMaxLength": 10,
-  "emmet.excludeLanguages": [
-    "markdown"
-  ],
+  "emmet.excludeLanguages": ["markdown"],
   "emmet.extensionsPath": "",
   "emmet.includeLanguages": {},
   "emmet.optimizeStylesheetParsing": true,
@@ -898,12 +877,7 @@
     "org.mockito.Answers.*"
   ],
   "java.completion.guessMethodArguments": false,
-  "java.completion.importOrder": [
-    "java",
-    "javax",
-    "com",
-    "org"
-  ],
+  "java.completion.importOrder": ["java", "javax", "com", "org"],
   "java.completion.overwrite": true,
   "java.configuration.checkProjectSettingsExclusions": true,
   "java.configuration.maven.userSettings": "",
@@ -984,10 +958,7 @@
   "vsintellicode.modify.editor.suggestSelection": "enabled",
   "vsintellicode.python.completionsEnabled": true,
   "vsintellicode.typescript.completionsEnabled": true,
-  "css.fileExtensions": [
-    "css",
-    "scss"
-  ],
+  "css.fileExtensions": ["css", "scss"],
   "css.remoteStyleSheets": [],
   "git.allowForcePush": false,
   "git.alwaysShowStagedChangesResourceGroup": false,
@@ -1026,12 +997,7 @@
   "git.showProgress": true,
   "git.showPushSuccessNotification": false,
   "git.useForcePushWithLease": true,
-  "maven.excludedFolders": [
-    "**/.*",
-    "**/node_modules",
-    "**/target",
-    "**/bin"
-  ],
+  "maven.excludedFolders": ["**/.*", "**/node_modules", "**/target", "**/bin"],
   "maven.executable.options": "",
   "maven.executable.path": "",
   "maven.executable.preferMavenWrapper": true,
@@ -1057,7 +1023,6 @@
   "java.debug.settings.showQualifiedNames": false,
   "java.debug.settings.showStaticVariables": true,
   "npm.autoDetect": "on",
-  "npm.enableScriptExplorer": false,
   "npm.exclude": "",
   "npm.fetchOnlinePackageInfo": true,
   "npm.packageManager": "npm",
@@ -1077,10 +1042,7 @@
   "eslint.packageManager": "npm",
   "eslint.runtime": null,
   "eslint.trace.server": "off",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact"],
   "eslint.workingDirectories": [],
   "debug.node.autoAttach": "disabled"
 }
