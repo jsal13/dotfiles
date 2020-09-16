@@ -45,7 +45,7 @@ reboot
 mkdir -p ~/repos && cd ~/repos && git clone https://github.com/jsal13/sneakbike.git 
 sudo snap install --classic certbot
 
-echo "alias refresh_sb=\"docker stop \$( docker ps | awk 'NR>1 { print $1}') && git pull origin master &&  docker build -t sneakbike . &&  docker run -d -p 8000:8080 sneakbike\"" >> ~/.bash_profile && source ~/.bash_profile
+echo "alias refresh_sb=\"docker stop \$( docker ps | awk 'NR>1 { print \$1}') && git pull origin master &&  docker build -t sneakbike . &&  docker run -d -p 8000:8080 sneakbike\"" >> ~/.bash_profile && source ~/.bash_profile
 
 
 # SSL Stuff
