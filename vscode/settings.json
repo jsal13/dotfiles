@@ -135,7 +135,7 @@
 	"workbench.editor.tabCloseButton": "right",
 	"workbench.editor.tabSizing": "fit",
 	"workbench.enableExperiments": true,
-	"workbench.iconTheme": "city-lights-icons-vsc-light",
+	"workbench.iconTheme": "vscode-icons"
 	"workbench.list.multiSelectModifier": "ctrlCmd",
 	"workbench.list.openMode": "singleClick",
 	"workbench.panel.defaultLocation": "bottom",
@@ -754,7 +754,7 @@
 	"emmet.excludeLanguages": [
 		"markdown"
 	],
-	"emmet.extensionsPath": "",
+	"emmet.extensionsPath": [""],
 	"emmet.includeLanguages": {},
 	"emmet.optimizeStylesheetParsing": true,
 	"emmet.preferences": {},
