@@ -40,7 +40,11 @@ Get-AppxPackage -name "Microsoft.WindowsPhone" | Remove-AppxPackage
 
 exit
 
-choco install -y 7zip adobereader audacity googlechrome conemu deluge discord firacode gimp git minecraft obs-studio rainmeter slack spotify spybot steam vlc vscode
+# conemu rainmeter spotify
+# NEED TO INSTALL SEPARATELY:
+# chatty visual-studio elgato notion screen-to-gif huion-tablet logitech-g-hub twilio calibre krita obs-websocket-extension
+# diablo-2-plugin-y parsec
+choco install -y 7zip adobereader audacity googlechrome deluge discord firacode gimp git minecraft obs-studio slack spybot steam vlc vscode
 
 exit
 
