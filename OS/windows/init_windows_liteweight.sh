@@ -2,8 +2,19 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # ---
+
+# $excludedApps = ‘.*photos.*|.*sticky.*|.*zunevideo.*’
+
+# $unwantedApps = Get-AppxPackage -PackageTypeFilter Bundle | Where-Object {$_.Name -notmatch $excludedApps}
+
+# If ($unwantedApps) {
+
+# $unwantedApps | Remove-AppxPackage
+# }
+
+# ---
 # SEPARATE INSTALL: notion, twilio, huion-tablet screen-to-gif
-choco install -y 7zip adobereader audacity deluge discord firacode git spybot vlc vscode
+choco install -y 7zip adobereader audacity deluge discord firacode git opera spybot vlc vscode
 
 # ---
 
