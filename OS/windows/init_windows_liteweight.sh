@@ -2,7 +2,7 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # ---
-
+# DISM /Online /Get-ProvisionedAppxPackages | select-string Packagename 
 # $excludedApps = ‘.*photos.*|.*sticky.*|.*zunevideo.*’
 
 # $unwantedApps = Get-AppxPackage -PackageTypeFilter Bundle | Where-Object {$_.Name -notmatch $excludedApps}
