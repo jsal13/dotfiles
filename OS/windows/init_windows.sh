@@ -42,8 +42,7 @@ exit
 
 # conemu rainmeter spotify
 # NEED TO INSTALL SEPARATELY:
-# chatty visual-studio elgato notion screen-to-gif huion-tablet logitech-g-hub twilio calibre krita obs-websocket-extension
-# diablo-2-plugin-y parsec
+# chatty visual-studio elgato notion screen-to-gif huion-tablet logitech-g-hub twilio calibre krita obs-websocket-extension parsec
 # INSTALL SEPARATELY DUE TO IT BEING SO SLOW: gimp
 choco install -y 7zip adobereader audacity googlechrome deluge discord firacode git minecraft obs-studio slack spybot steam vlc vscode
 
