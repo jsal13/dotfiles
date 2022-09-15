@@ -1,6 +1,3 @@
-ON_WINDOWS=
-
-
 if grep -q WSL /proc/version; then
     # If we're running WSL.
     alias jira="cat ~/.jiratemplate | clip.exe"
@@ -8,4 +5,4 @@ fi
 
 # General aliases, regardless of OS.
 alias k="kubectl"
-alias dcp="docker-compose prune"
+alias dcprune="docker container prune -f && docker volume prune -f"
