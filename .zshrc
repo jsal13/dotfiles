@@ -12,6 +12,14 @@ plugins=(git docker)
 source $ZSH/oh-my-zsh.sh 
 source ~/.aliases
 
+# Make pressing "up" cycle through matching unix commands.
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/james/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
