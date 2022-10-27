@@ -1,6 +1,7 @@
 if grep -q WSL /proc/version; then
     # If we're running WSL.
     alias jira="cat ~/.jiratemplate | clip.exe"
+    alias pr="cat ~/.github_pr_template | clip.exe"
 fi
 
 # General aliases, regardless of OS.
