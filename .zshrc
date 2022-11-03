@@ -22,14 +22,14 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/james/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/james/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/james/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/home/james/anaconda/etc/profile.d/conda.sh"
+    if [ -f "/home/james/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/james/miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/home/james/anaconda/bin:$PATH"
+        export PATH="/home/james/miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
