@@ -34,3 +34,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Make poetry do local venvs.
+poetry config virtualenvs.in-project true
