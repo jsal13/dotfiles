@@ -1,14 +1,16 @@
+#!/bin/bash
+
 MINICONDA_LATEST_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 OH_MY_ZSH_LATEST_URL=https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 
 sudo apt-get update \
-    && apt-get install -y \
+    && sudo apt-get install -y \
     jq \
     git \
     tmux \
     wget \
     zsh \
-    && rm -rf /var/lib/apt/lists/*
+    && sudo rm -rf /var/lib/apt/lists/*
 
 wget $OH_MY_ZSH_LATEST_URL -O $HOME/omzsh.sh \
     && sh $HOME/omzsh.sh --unattended \
@@ -37,3 +39,8 @@ $HOME/miniconda/bin/mamba install -y \
     pytest \
     requests
 
+# If you have the main directory as a dotfile git dir, then it'll have a custom ~/.zshrc.
+cd $HOME && git restore ~/.zshrc || echo "Could not restore custom ~/.zshrc."
+
+# Make repo directory.
+mkdir -p $HOME/repos
