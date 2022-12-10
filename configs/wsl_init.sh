@@ -25,6 +25,9 @@ wget $MINICONDA_LATEST_URL -O $HOME/miniconda.sh \
 
 $HOME/miniconda/bin/conda install -c conda-forge -y mamba
 
+# Install Poetry
+curl -sSL https://install.python-poetry.org | python3 -
+
 $HOME/miniconda/bin/mamba install -y \
     altair \
     black \
@@ -33,7 +36,6 @@ $HOME/miniconda/bin/mamba install -y \
     matplotlib \
     numpy \
     pandas \
-    poetry \
     pydocstyle \
     pylint \
     pytest \
