@@ -6,4 +6,16 @@ fi
 
 # General aliases, regardless of OS.
 alias k="kubectl"
-alias dcprune="docker container prune -f && docker volume prune -f"
+
+nuke_k8s() {
+    k3d cluster delete --all
+}
+
+nuke_docker() {
+    docker rm -f -v $(docker ps -aq)
+    docker rmi -f  $(docker images -q)
+    docker volume rm $(docker volume ls -q)
+    docker network rm $(docker network ls -q)
+}
+
+alias nuke="nuke_docker;nuke_k8s;"
