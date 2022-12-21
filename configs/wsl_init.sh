@@ -16,8 +16,6 @@ wget $OH_MY_ZSH_LATEST_URL -O $HOME/omzsh.sh \
     && sh $HOME/omzsh.sh --unattended \
     && rm -f $HOME/omzsh.sh
 
-sudo chsh -s /usr/bin/zsh
-
 wget $MINICONDA_LATEST_URL -O $HOME/miniconda.sh \
     && bash $HOME/miniconda.sh -b -p $HOME/miniconda \
     && rm -f $HOME/miniconda.sh \

@@ -1,12 +1,5 @@
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
-export ZSH="/home/james/.oh-my-zsh"
-
-# Ruby Stuff.
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-
-ZSH_THEME="avit"
-
+# Env Variables
+source ~/.env
 plugins=(git docker)
 
 source $ZSH/oh-my-zsh.sh 
