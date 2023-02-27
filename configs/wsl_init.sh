@@ -23,7 +23,7 @@ wget $OH_MY_ZSH_LATEST_URL -O $HOME/omzsh.sh \
     && rm -f $HOME/omzsh.sh
 
 wget $MINIFORGE_LATEST_URL -O $HOME/miniforge.sh \
- && sh ./miniforge.sh -b -p  $HOME/miniconda \
+ && sh $HOME/miniforge.sh -b -p  $HOME/miniconda \
  && $HOME/miniconda/bin/conda config --set always_yes yes --set changeps1 no \
  && $HOME/miniconda/bin/conda update -q -y conda \
  && rm -f $HOME/miniforge.sh
