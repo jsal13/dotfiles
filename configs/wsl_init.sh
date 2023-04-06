@@ -8,7 +8,6 @@ MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/do
 sudo apt-get update \
     && sudo apt-get install -y \
     jq \
-    golang-go \
     git \
     gnupg \
     gpg \
@@ -56,7 +55,9 @@ $HOME/miniconda/bin/mamba install -y \
 cd $HOME && git restore ~/.zshrc || echo "Could not restore custom ~/.zshrc."
 
 # Install Kind
-go install sigs.k8s.io/kind@v0.18.0
+curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.18.0/kind-$(uname)-amd64" && \
+chmod +x ./kind && \
+sudo mv ./kind /usr/local/bin/kind
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
