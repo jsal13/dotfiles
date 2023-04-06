@@ -12,7 +12,8 @@ This directory is maintained as a [dotfile](https://www.webpro.nl/articles/getti
 ```shell
 git init
 git checkout -b main
-git remote add origin git@github.com:jsal13/dotfiles.
+git remote add origin git@github.com:jsal13/dotfiles
+git pull origin main
 cd configs && ./wsl_init.sh
 sudo chsh -s /usr/bin/zsh
 ```

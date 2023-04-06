@@ -5,6 +5,7 @@ OH_MY_ZSH_LATEST_URL=https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 KIND_VERSION=0.17.0
 MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
+
 sudo apt-get update \
     && sudo apt-get install -y \
     jq \
@@ -24,7 +25,7 @@ wget $OH_MY_ZSH_LATEST_URL -O $HOME/omzsh.sh \
     && rm -f $HOME/omzsh.sh
 
 wget $MINIFORGE_LATEST_URL -O $HOME/miniforge.sh \
- && sh ./miniforge.sh -b -p  $HOME/miniconda \
+ && sh $HOME/miniforge.sh -b -p  $HOME/miniconda \
  && $HOME/miniconda/bin/conda config --set always_yes yes --set changeps1 no \
  && $HOME/miniconda/bin/conda update -q -y conda \
  && rm -f $HOME/miniforge.sh
@@ -61,13 +62,21 @@ go install sigs.k8s.io/kind@v0.18.0
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
 unzip awscliv2.zip && \
-sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli
+sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli && \
+rm -rf awscliv2.zip
 
 # Install Terraform
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg && \
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list && \
 sudo apt update && \
 sudo apt install -y terraform
+
+# Install just
+curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null && \
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list && \
+sudo apt update && \
+sudo apt install -y just
+
 
 # Make repo directory.
 mkdir -p $HOME/repos
