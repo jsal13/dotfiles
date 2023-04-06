@@ -7,10 +7,12 @@ MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/do
 
 sudo apt-get update \
     && sudo apt-get install -y \
+    apt-transport-https \
     jq \
     git \
     gnupg \
     gpg \
+    make \
     software-properties-common \
     tmux \
     unzip \
@@ -54,10 +56,26 @@ $HOME/miniconda/bin/mamba install -y \
 # If you have the main directory as a dotfile git dir, then it'll have a custom ~/.zshrc.
 cd $HOME && git restore ~/.zshrc || echo "Could not restore custom ~/.zshrc."
 
-# Install Kind
+# Install Kind (2023-04-06)
 curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.18.0/kind-$(uname)-amd64" && \
 chmod +x ./kind && \
 sudo mv ./kind /usr/local/bin/kind
+
+# Install Helm (2023-04-06)
+curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null && \
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
+sudo apt-get update && \
+sudo apt-get install helm
+
+# Install k9s
+git clone ssh://git@github.com/derailed/k9s --depth=1 && \
+cd k9s && \
+make build && \
+sudo mv ./execs/k9s /usr/local/bin && \
+cd .. && \
+rm -rf k9s
+
+
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
