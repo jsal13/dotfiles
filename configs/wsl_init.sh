@@ -56,10 +56,8 @@ $HOME/miniconda/bin/mamba install -y \
 # If you have the main directory as a dotfile git dir, then it'll have a custom ~/.zshrc.
 cd $HOME && git restore ~/.zshrc || echo "Could not restore custom ~/.zshrc."
 
-# Install Kind (2023-04-06)
-curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.18.0/kind-$(uname)-amd64" && \
-chmod +x ./kind && \
-sudo mv ./kind /usr/local/bin/kind
+# Install k3d (2023-04-06)
+wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 
 # Install Helm (2023-04-06)
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null && \
@@ -74,8 +72,6 @@ make build && \
 sudo mv ./execs/k9s /usr/local/bin && \
 cd .. && \
 rm -rf k9s
-
-
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -94,7 +90,6 @@ curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearm
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list && \
 sudo apt update && \
 sudo apt install -y just
-
 
 # Make repo directory.
 mkdir -p $HOME/repos
