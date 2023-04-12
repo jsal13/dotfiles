@@ -35,8 +35,8 @@ Get-AppxPackage *ZuneVideo* | Remove-AppxPackage
 
 # ---
 # POWERSHELL ADMIN (New Window):
-choco install -y 7zip adobereader awscli calibre dbeaver deluge discord firacode git spybot terraform vlc vscode
-# INSTALL THESE SEPARATELY: notion, twilio, huion-tablet, screen-to-gif, lghub
+choco install -y 7zip adobereader authy-desktop awscli calibre dbeaver deluge discord firacode git lghub lightshot notion spybot terraform vlc vscode
+# INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif
 
 # ---
 # POWERSHELL NON-ADMIN
