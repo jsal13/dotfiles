@@ -5,6 +5,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # ---
 # POWERSHELL ADMIN (New Window):
 # Gets rid of a lot of Windows crufty unnecessary packages.
+# Run get-appxpackage | format-table -autosize -property PackageFamilyName and compare unwanted packages to this.
+Get-AppxPackage *BingNews* | Remove-AppxPackage
 Get-AppxPackage *BingWeather* | Remove-AppxPackage
 Get-AppxPackage *GetHelp* | Remove-AppxPackage
 Get-AppxPackage *Getstarted* | Remove-AppxPackage
@@ -13,9 +15,11 @@ Get-AppxPackage *Microsoft3DViewer* | Remove-AppxPackage
 Get-AppxPackage *MicrosoftOfficeHub* | Remove-AppxPackage
 Get-AppxPackage *MicrosoftSolitaireCollection* | Remove-AppxPackage
 Get-AppxPackage *MicrosoftStickyNotes* | Remove-AppxPackage
+Get-AppxPackage *MicrosoftTeams* | Remove-AppxPackage
 Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage
 Get-AppxPackage *Office.OneNote* | Remove-AppxPackage
 Get-AppxPackage *OneConnect* | Remove-AppxPackage
+Get-AppxPackage *OneDriveSync* | Remove-AppxPackage
 Get-AppxPackage *Print3D* | Remove-AppxPackage
 Get-AppxPackage *SkypeApp* | Remove-AppxPackage
 Get-AppxPackage *Wallet* | Remove-AppxPackage
