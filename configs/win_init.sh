@@ -48,12 +48,17 @@ choco install -y `
     dbeaver `
     deluge `
     discord `
+    docker-desktop `
     firacode `
     git `
+    googledrive `
+    k3d `
     lghub `
     lightshot `
     notion `
+    obs-studio `
     spybot `
+    steam `
     terraform `
     vlc `
     vscode
