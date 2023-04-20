@@ -74,6 +74,8 @@ choco install -y `
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension formulahendry.code-runner
 code --install-extension hashicorp.terraform
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension ms-python.isort
 code --install-extension ms-python.python
 code --install-extension ms-python.vscode-pylance
