@@ -50,6 +50,7 @@ choco install -y `
     discord `
     docker-desktop `
     firacode `
+    firefox `
     git `
     googledrive `
     k3d `
@@ -57,11 +58,13 @@ choco install -y `
     lightshot `
     notion `
     obs-studio `
+    screentogif `
     spybot `
     steam `
     terraform `
     vlc `
-    vscode
+    vscode `
+    windirstat
 
 # INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif
 
