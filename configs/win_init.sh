@@ -5,6 +5,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # ---
 # POWERSHELL ADMIN (New Window):
 # Gets rid of a lot of Windows crufty unnecessary packages.
+# Run get-appxpackage | format-table -autosize -property PackageFamilyName and compare unwanted packages to this.
+Get-AppxPackage *BingNews* | Remove-AppxPackage
 Get-AppxPackage *BingWeather* | Remove-AppxPackage
 Get-AppxPackage *GetHelp* | Remove-AppxPackage
 Get-AppxPackage *Getstarted* | Remove-AppxPackage
@@ -13,9 +15,11 @@ Get-AppxPackage *Microsoft3DViewer* | Remove-AppxPackage
 Get-AppxPackage *MicrosoftOfficeHub* | Remove-AppxPackage
 Get-AppxPackage *MicrosoftSolitaireCollection* | Remove-AppxPackage
 Get-AppxPackage *MicrosoftStickyNotes* | Remove-AppxPackage
+Get-AppxPackage *MicrosoftTeams* | Remove-AppxPackage
 Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage
 Get-AppxPackage *Office.OneNote* | Remove-AppxPackage
 Get-AppxPackage *OneConnect* | Remove-AppxPackage
+Get-AppxPackage *OneDriveSync* | Remove-AppxPackage
 Get-AppxPackage *Print3D* | Remove-AppxPackage
 Get-AppxPackage *SkypeApp* | Remove-AppxPackage
 Get-AppxPackage *Wallet* | Remove-AppxPackage
@@ -35,14 +39,53 @@ Get-AppxPackage *ZuneVideo* | Remove-AppxPackage
 
 # ---
 # POWERSHELL ADMIN (New Window):
-choco install -y 7zip adobereader awscli calibre deluge discord firacode git spybot terraform vlc vscode
-# INSTALL THESE SEPARATELY: notion, twilio, huion-tablet, screen-to-gif, lghub
+choco install -y `
+    7zip `
+    adobereader `
+    authy-desktop `
+    awscli `
+    calibre `
+    darktable `
+    dbeaver `
+    deluge `
+    discord `
+    docker-desktop `
+    firacode `
+    firefox `
+    git `
+    googledrive `
+    k3d `
+    lghub `
+    lightshot `
+    notion `
+    obs-studio `
+    screentogif `
+    spybot `
+    steam `
+    terraform `
+    vlc `
+    vscode `
+    windirstat
+
+# INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif
 
 # ---
 # POWERSHELL NON-ADMIN
 # For VSCode only, don't install if you don't use VSCode.
-code --install-extension formulahendry.auto-close-tag
+code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension formulahendry.code-runner
-code --install-extension ms-python.python 
-code --install-extension vscode-icons-team.vscode-icons
-code --install-extension yummygum.city-lights-theme
+code --install-extension hashicorp.terraform
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension ms-python.isort
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
+code --install-extension ms-toolsai.vscode-jupyter-cell-tags
+code --install-extension ms-toolsai.vscode-jupyter-slideshow
+code --install-extension ms-vscode.powershell
+code --install-extension skellock.just
+code --install-extension Yummygum.city-lights-theme
+code --install-extension yzhang.markdown-all-in-one

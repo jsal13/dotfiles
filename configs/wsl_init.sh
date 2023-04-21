@@ -2,16 +2,17 @@
 
 # MINICONDA_LATEST_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 OH_MY_ZSH_LATEST_URL=https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-KIND_VERSION=0.17.0
 MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
 
 sudo apt-get update \
     && sudo apt-get install -y \
+    apt-transport-https \
     jq \
     git \
     gnupg \
     gpg \
+    make \
     software-properties-common \
     tmux \
     unzip \
@@ -55,14 +56,22 @@ $HOME/miniconda/bin/mamba install -y \
 # If you have the main directory as a dotfile git dir, then it'll have a custom ~/.zshrc.
 cd $HOME && git restore ~/.zshrc || echo "Could not restore custom ~/.zshrc."
 
+# Install k3d (2023-04-06)
+wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 
-# Install Kind
-if [ ! -d $HOME/kind ]
-then
-    curl -Lo ./kind https://kind.sigs.k8s.io/dl/v{KIND_VERSION}/kind-linux-amd64 && \
-    chmod +x ./kind && \
-    sudo mv ./kind /usr/local/bin/kind
-fi
+# Install Helm (2023-04-06)
+curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null && \
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list && \
+sudo apt-get update && \
+sudo apt-get install helm
+
+# Install k9s
+git clone ssh://git@github.com/derailed/k9s --depth=1 && \
+cd k9s && \
+make build && \
+sudo mv ./execs/k9s /usr/local/bin && \
+cd .. && \
+rm -rf k9s
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
@@ -81,7 +90,6 @@ curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearm
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list && \
 sudo apt update && \
 sudo apt install -y just
-
 
 # Make repo directory.
 mkdir -p $HOME/repos
