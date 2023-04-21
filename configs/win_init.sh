@@ -45,6 +45,7 @@ choco install -y `
     authy-desktop `
     awscli `
     calibre `
+    darktable `
     dbeaver `
     deluge `
     discord `
