@@ -5,6 +5,10 @@ plugins=(git docker)
 source $ZSH/oh-my-zsh.sh 
 source ~/.aliases
 
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
 # Make pressing "up" cycle through matching unix commands.
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
