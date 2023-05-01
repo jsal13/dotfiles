@@ -67,7 +67,7 @@ choco install -y `
     vscode `
     windirstat
 
-# INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif
+# INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif, iCUE (RGB RAM).
 
 # ---
 # POWERSHELL NON-ADMIN
