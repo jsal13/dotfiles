@@ -42,6 +42,7 @@ Get-AppxPackage *ZuneVideo* | Remove-AppxPackage
 choco install -y `
     7zip `
     adobereader `
+    audacity `
     authy-desktop `
     awscli `
     calibre `
