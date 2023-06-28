@@ -91,5 +91,18 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring
 sudo apt update && \
 sudo apt install -y just
 
+# Install Ruby and Jekyll (for Blog!)
+# Ref: https://jekyllrb.com/
+sudo apt-get install -y ruby-full && \
+gem install bundler jekyll && \
+
+# Install AGE.
+AGE_VERSION=$(curl -s "https://api.github.com/repos/FiloSottile/age/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
+curl -Lo age.tar.gz "https://github.com/FiloSottile/age/releases/latest/download/age-v${AGE_VERSION}-linux-amd64.tar.gz" && \
+tar xf age.tar.gz && \
+sudo mv age/age /usr/local/bin && \
+sudo mv age/age-keygen /usr/local/bin && \
+rm -rf ./age && rm age.tar.gz
+
 # Make repo directory.
 mkdir -p $HOME/repos
