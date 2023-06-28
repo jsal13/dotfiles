@@ -8,6 +8,7 @@ MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/do
 sudo apt-get update \
     && sudo apt-get install -y \
     apt-transport-https \
+    age \
     jq \
     git \
     gnupg \
@@ -96,13 +97,14 @@ sudo apt install -y just
 sudo apt-get install -y ruby-full && \
 gem install bundler jekyll && \
 
-# Install AGE.
-AGE_VERSION=$(curl -s "https://api.github.com/repos/FiloSottile/age/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
-curl -Lo age.tar.gz "https://github.com/FiloSottile/age/releases/latest/download/age-v${AGE_VERSION}-linux-amd64.tar.gz" && \
-tar xf age.tar.gz && \
-sudo mv age/age /usr/local/bin && \
-sudo mv age/age-keygen /usr/local/bin && \
-rm -rf ./age && rm age.tar.gz
+# Install SOPS.
+SOPS_LATEST_VERSION=$(curl -s "https://api.github.com/repos/mozilla/sops/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
+curl -Lo sops.deb "https://github.com/mozilla/sops/releases/latest/download/sops_${SOPS_LATEST_VERSION}_amd64.deb" && \
+sudo apt --fix-broken install ./sops.deb && \
+rm -rf sops.deb
 
 # Make repo directory.
 mkdir -p $HOME/repos
+
+# Clean up
+sudo apt-get -y autoremove
