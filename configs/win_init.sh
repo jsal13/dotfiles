@@ -87,6 +87,7 @@ code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-toolsai.vscode-jupyter-cell-tags
 code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension ms-vscode.powershell
+code --install-extension njpwerner.autodocstring
 code --install-extension skellock.just
 code --install-extension Yummygum.city-lights-theme
 code --install-extension yzhang.markdown-all-in-one
