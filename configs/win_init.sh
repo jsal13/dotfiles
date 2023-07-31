@@ -60,6 +60,7 @@ choco install -y `
     lightshot `
     notion `
     obs-studio `
+    powertoys `
     screentogif `
     spybot `
     steam `
