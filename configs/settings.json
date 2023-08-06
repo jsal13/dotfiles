@@ -564,13 +564,6 @@
   ],
   "python.linting.lintOnSave": true,
   "python.linting.maxNumberOfProblems": 100,
-  "python.linting.mypyArgs": [
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--show-column-numbers"
-  ],
-  "python.linting.mypyCategorySeverity.error": "Error",
-  "python.linting.mypyCategorySeverity.note": "Information",
   "python.linting.prospectorArgs": [],
   "python.linting.prospectorEnabled": false,
   "python.linting.pydocstyleArgs": [],
@@ -661,4 +654,7 @@
   "git.openRepositoryInParentFolders": "never",
   "editor.language.brackets": [],
   "window.zoomLevel": 2,
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  "black-formatter.importStrategy": "fromEnvironment",
+  "python.linting.mypyArgs": [],
 }
