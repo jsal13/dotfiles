@@ -541,7 +541,6 @@
     "editor.autoIndent": "keep"
   },
   "gulp.autoDetect": "on",
-  "python.analysis.logLevel": "Error",
   "python.analysis.typeshedPaths": [],
   "python.autoComplete.extraPaths": [],
   "python.diagnostics.sourceMapsEnabled": false,
@@ -553,7 +552,6 @@
   "python.globalModuleInstallation": false,
   "python.linting.banditArgs": [],
   "python.linting.banditEnabled": false,
-  "python.linting.enabled": true,
   "python.linting.flake8Args": [],
   "python.linting.flake8CategorySeverity.E": "Error",
   "python.linting.flake8CategorySeverity.F": "Error",
@@ -562,7 +560,6 @@
     ".vscode/*.py",
     "**/site-packages/**/*.py"
   ],
-  "python.linting.lintOnSave": true,
   "python.linting.maxNumberOfProblems": 100,
   "python.linting.prospectorArgs": [],
   "python.linting.prospectorEnabled": false,
@@ -654,7 +651,12 @@
   "git.openRepositoryInParentFolders": "never",
   "editor.language.brackets": [],
   "window.zoomLevel": 2,
-  "mypy-type-checker.importStrategy": "fromEnvironment",
-  "black-formatter.importStrategy": "fromEnvironment",
   "python.linting.mypyArgs": [],
+  "python.testing.pytestEnabled": true,
+  "autoDocstring.startOnNewLine": true,
+  "ruff.importStrategy": "useBundled",
+  "ruff.run": "onSave",
+  "mypy-type-checker.path": [
+    "${workspaceFolder}/.venv/bin/mypy"
+  ]
 }
