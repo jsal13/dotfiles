@@ -4,9 +4,6 @@
   "editor.wordWrapColumn": 110,
   "workbench.colorTheme": "City Lights",
   "workbench.startupEditor": "newUntitledFile",
-  "auto-close-tag.enableAutoCloseSelfClosingTag": false,
-  "auto-close-tag.enableAutoCloseTag": true,
-  "auto-close-tag.SublimeText3Mode": true,
   "explorer.confirmDragAndDrop": false,
   "editor.tabCompletion": "onlySnippets",
   "editor.fontWeight": "200",
@@ -39,7 +36,7 @@
   "editor.colorDecorators": true,
   "editor.copyWithSyntaxHighlighting": true,
   "editor.cursorBlinking": "blink",
-  "editor.cursorSmoothCaretAnimation": false,
+  "editor.cursorSmoothCaretAnimation": "off",
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 0,
   "editor.detectIndentation": true,
@@ -162,7 +159,6 @@
   "files.eol": "auto",
   "files.hotExit": "onExit",
   "files.insertFinalNewline": false,
-  "files.maxMemoryForLargeFilesMB": 4096,
   "files.trimFinalNewlines": false,
   "files.trimTrailingWhitespace": false,
   "files.watcherExclude": {
@@ -305,8 +301,6 @@
   "typescript.surveys.enabled": true,
   "typescript.tsc.autoDetect": "on",
   "typescript.tsserver.log": "off",
-  "typescript.tsserver.pluginPaths": [],
-  "typescript.tsserver.trace": "off",
   "typescript.updateImportsOnFileMove.enabled": "prompt",
   "typescript.validate.enable": true,
   "css.lint.argumentsInColorFunction": "error",
@@ -516,44 +510,6 @@
   "outline.problems.badges": true,
   "outline.problems.colors": true,
   "outline.problems.enabled": true,
-  "auto-close-tag.activationOnLanguage": [
-    "xml",
-    "php",
-    "blade",
-    "ejs",
-    "jinja",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "plaintext",
-    "markdown",
-    "vue",
-    "liquid",
-    "erb",
-    "lang-cfml",
-    "cfml",
-    "HTML (Eex)"
-  ],
-  "auto-close-tag.excludedTags": [
-    "area",
-    "base",
-    "br",
-    "col",
-    "command",
-    "embed",
-    "hr",
-    "img",
-    "input",
-    "keygen",
-    "link",
-    "meta",
-    "param",
-    "source",
-    "track",
-    "wbr"
-  ],
-  "auto-close-tag.fullMode": false,
   "[git-commit]": {
     "editor.rulers": [
       72
@@ -576,7 +532,8 @@
       "comments": "off",
       "strings": "off",
       "other": "off"
-    }
+    },
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[yaml]": {
     "editor.insertSpaces": true,
@@ -601,7 +558,6 @@
   "python.linting.flake8CategorySeverity.E": "Error",
   "python.linting.flake8CategorySeverity.F": "Error",
   "python.linting.flake8CategorySeverity.W": "Warning",
-  "python.linting.flake8Enabled": true,
   "python.linting.ignorePatterns": [
     ".vscode/*.py",
     "**/site-packages/**/*.py"
@@ -615,11 +571,9 @@
   ],
   "python.linting.mypyCategorySeverity.error": "Error",
   "python.linting.mypyCategorySeverity.note": "Information",
-  "python.linting.mypyEnabled": true,
   "python.linting.prospectorArgs": [],
   "python.linting.prospectorEnabled": false,
   "python.linting.pydocstyleArgs": [],
-  "python.linting.pydocstyleEnabled": true,
   "python.linting.pylamaArgs": [],
   "python.linting.pylamaEnabled": false,
   "python.linting.pylintArgs": [],
@@ -694,15 +648,17 @@
   "jupyter.askForKernelRestart": false,
   "editor.bracketPairColorization.enabled": true,
   "terminal.integrated.inheritEnv": false,
-  "window.zoomLevel": 2,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
   "auto-close-tag.disableOnLanguage": [],
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "python.linting.pylintEnabled": true,
-  "editor.experimental.stickyScroll.enabled": true,
-  "editor.language.colorizedBracketPairs": []
+  "editor.language.colorizedBracketPairs": [],
+  "editor.stickyScroll.enabled": true,
+  "security.workspace.trust.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "editor.language.brackets": [],
+  "window.zoomLevel": 2,
 }
