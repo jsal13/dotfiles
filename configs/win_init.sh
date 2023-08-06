@@ -92,5 +92,6 @@ code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension ms-vscode.powershell
 code --install-extension njpwerner.autodocstring
 code --install-extension skellock.just
+code --install-extension tamasfe.even-better-toml
 code --install-extension Yummygum.city-lights-theme
 code --install-extension yzhang.markdown-all-in-one
