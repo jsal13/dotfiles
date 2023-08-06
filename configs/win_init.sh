@@ -79,6 +79,7 @@ code --install-extension formulahendry.code-runner
 code --install-extension hashicorp.terraform
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension ms-python.black-formatter
 code --install-extension ms-python.isort
 code --install-extension ms-python.python
 code --install-extension ms-python.mypy-type-checker
