@@ -670,6 +670,14 @@
         "details",
         "summary"
       ]
-    }
-  }
+    },
+    "MD024": false
+  },
+  "markdown.extension.list.toggle.candidate-markers": [
+    "-",
+    "*",
+    "+",
+    "1.",
+    "1)"
+  ]
 }
