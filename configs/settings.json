@@ -658,5 +658,18 @@
   "ruff.run": "onSave",
   "mypy-type-checker.path": [
     "${workspaceFolder}/.venv/bin/mypy"
-  ]
+  ],
+  "markdown.extension.italic.indicator": "_",
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdownlint.config": {
+    "MD033": {
+      "allowed_elements": [
+        "nobr",
+        "sup",
+        "a",
+        "details",
+        "summary"
+      ]
+    }
+  }
 }
