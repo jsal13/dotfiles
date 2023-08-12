@@ -67,6 +67,7 @@ choco install -y `
     terraform `
     vlc `
     vscode `
+    whatsapp `
     windirstat
 
 # INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif, iCUE (RGB RAM).
