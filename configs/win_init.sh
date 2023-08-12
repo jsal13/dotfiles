@@ -54,6 +54,7 @@ choco install -y `
     firacode `
     firefox `
     git `
+    googlechrome `
     googledrive `
     k3d `
     lghub `
