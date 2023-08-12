@@ -63,6 +63,7 @@ choco install -y `
     obs-studio `
     powertoys `
     screentogif `
+    slack `
     spybot `
     steam `
     terraform `
