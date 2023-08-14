@@ -67,6 +67,7 @@ choco install -y `
     spybot `
     steam `
     terraform `
+    tidal `
     vlc `
     vscode `
     whatsapp `
