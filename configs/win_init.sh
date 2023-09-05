@@ -56,6 +56,7 @@ choco install -y `
     git `
     googlechrome `
     googledrive `
+    just `
     k3d `
     lghub `
     lightshot `
