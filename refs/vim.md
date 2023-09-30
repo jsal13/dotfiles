@@ -162,7 +162,7 @@ Tip: Instead of b or B one can also use ( or { respectively.
 
 Tip: Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.
 
-## Tip Special registers:
+## Special registers
 
 |                  |                                       |
 | ---------------- | ------------------------------------- |
