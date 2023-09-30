@@ -104,6 +104,11 @@ curl -Lo sops.deb "https://github.com/mozilla/sops/releases/latest/download/sops
 sudo apt --fix-broken install ./sops.deb && \
 rm -rf sops.deb
 
+# Install NVM.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+. ~/.zshrc  # Command alias refresh.
+nvm install node
+
 # Make repo directory.
 mkdir -p $HOME/repos
 
