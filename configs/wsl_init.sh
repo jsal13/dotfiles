@@ -14,6 +14,7 @@ sudo apt-get update \
     gnupg \
     gpg \
     make \
+    net-tools \
     software-properties-common \
     tmux \
     unzip \
