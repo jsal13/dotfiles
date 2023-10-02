@@ -2,6 +2,7 @@ if grep -q WSL /proc/version; then
     # If we're running WSL.
     alias jira="cat ~/.jiratemplate | clip.exe"
     alias pr="cat ~/.prtemplate | clip.exe"
+    alias blog="cat ~/.blogtemplate | clip.exe"
 fi
 
 # General aliases, regardless of OS.
@@ -19,3 +20,6 @@ nuke_docker() {
 }
 
 alias nuke="nuke_docker;nuke_k8s;"
+
+alias tfp="terraform plan"
+alias tfa="terraform apply -auto-approve"
