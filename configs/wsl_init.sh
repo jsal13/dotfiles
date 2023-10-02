@@ -19,6 +19,7 @@ sudo apt-get update \
     tmux \
     unzip \
     wget \
+    wireless-tools \
     zsh \
     && sudo rm -rf /var/lib/apt/lists/*
 
