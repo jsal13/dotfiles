@@ -38,3 +38,7 @@ poetry config virtualenvs.in-project true
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# export CUDA_HOME=/usr/local/cuda
+# export LIBRARY_PATH="${CUDA_HOME}/lib64"
+# export C_INCLUDE_PATH="${CUDA_HOME}/include"

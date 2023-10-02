@@ -23,3 +23,7 @@ alias nuke="nuke_docker;nuke_k8s;"
 
 alias tfp="terraform plan"
 alias tfa="terraform apply -auto-approve"
+
+alias bat='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
+alias notes='vi ~/refs/notes.md'
+alias pytemplate='cookiecutter ssh://git@github.com/jsal13/cookiecutter-dstemplate.git'

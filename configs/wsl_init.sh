@@ -8,15 +8,18 @@ MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/do
 sudo apt-get update \
     && sudo apt-get install -y \
     apt-transport-https \
+    age \
     jq \
     git \
     gnupg \
     gpg \
     make \
+    net-tools \
     software-properties-common \
     tmux \
     unzip \
     wget \
+    wireless-tools \
     zsh \
     && sudo rm -rf /var/lib/apt/lists/*
 
@@ -91,5 +94,24 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring
 sudo apt update && \
 sudo apt install -y just
 
+# Install Ruby and Jekyll (for Blog!)
+# Ref: https://jekyllrb.com/
+sudo apt-get install -y ruby-full && \
+gem install bundler jekyll && \
+
+# Install SOPS.
+SOPS_LATEST_VERSION=$(curl -s "https://api.github.com/repos/mozilla/sops/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
+curl -Lo sops.deb "https://github.com/mozilla/sops/releases/latest/download/sops_${SOPS_LATEST_VERSION}_amd64.deb" && \
+sudo apt --fix-broken install ./sops.deb && \
+rm -rf sops.deb
+
+# Install NVM.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+. ~/.zshrc  # Command alias refresh.
+nvm install node
+
 # Make repo directory.
 mkdir -p $HOME/repos
+
+# Clean up
+sudo apt-get -y autoremove

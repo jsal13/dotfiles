@@ -42,6 +42,7 @@ Get-AppxPackage *ZuneVideo* | Remove-AppxPackage
 choco install -y `
     7zip `
     adobereader `
+    audacity `
     authy-desktop `
     awscli `
     calibre `
@@ -53,21 +54,27 @@ choco install -y `
     firacode `
     firefox `
     git `
+    googlechrome `
     googledrive `
+    just `
     k3d `
     lghub `
     lightshot `
     notion `
     obs-studio `
+    powertoys `
     screentogif `
+    slack `
     spybot `
     steam `
     terraform `
+    tidal `
     vlc `
     vscode `
+    whatsapp `
     windirstat
 
-# INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif
+# INSTALL THESE SEPARATELY: huion-tablet, screen-to-gif, iCUE (RGB RAM).
 
 # ---
 # POWERSHELL NON-ADMIN
@@ -77,8 +84,10 @@ code --install-extension formulahendry.code-runner
 code --install-extension hashicorp.terraform
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension ms-python.black-formatter
 code --install-extension ms-python.isort
 code --install-extension ms-python.python
+code --install-extension ms-python.mypy-type-checker
 code --install-extension ms-python.vscode-pylance
 code --install-extension ms-toolsai.jupyter
 code --install-extension ms-toolsai.jupyter-keymap
@@ -86,6 +95,8 @@ code --install-extension ms-toolsai.jupyter-renderers
 code --install-extension ms-toolsai.vscode-jupyter-cell-tags
 code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension ms-vscode.powershell
+code --install-extension njpwerner.autodocstring
 code --install-extension skellock.just
+code --install-extension tamasfe.even-better-toml
 code --install-extension Yummygum.city-lights-theme
 code --install-extension yzhang.markdown-all-in-one
