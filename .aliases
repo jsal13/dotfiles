@@ -24,11 +24,6 @@ nuke_docker() {
 
 alias nuke="nuke_docker;nuke_k8s;"
 
-# TERRAFORM
-alias tfp="terraform plan"
-alias tfa="terraform apply -auto-approve"
-alias tfd="terraform destroy -auto-approve"
-
 # PYTHON
 alias pytemplate='cookiecutter ssh://git@github.com/jsal13/cookiecutter-dstemplate.git'
 
