@@ -27,6 +27,7 @@ $apps = @(
     "com.x8bit.bitwarden",
     "jp.co.canon.ic.cameraconnect"
     "me.lyft.android",
+    "notion.id",
     "sp0n.citizen",
 )
 
