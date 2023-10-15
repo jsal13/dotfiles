@@ -641,7 +641,6 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "auto-close-tag.disableOnLanguage": [],
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -654,13 +653,10 @@
   "python.linting.mypyArgs": [],
   "python.testing.pytestEnabled": true,
   "autoDocstring.startOnNewLine": true,
-  "ruff.importStrategy": "useBundled",
-  "ruff.run": "onSave",
   "mypy-type-checker.path": [
     "${workspaceFolder}/.venv/bin/mypy"
   ],
   "markdown.extension.italic.indicator": "_",
-  "markdown.extension.preview.autoShowPreviewToSide": true,
   "markdownlint.config": {
     "MD033": {
       "allowed_elements": [

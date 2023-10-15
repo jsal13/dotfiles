@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# MINICONDA_LATEST_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 OH_MY_ZSH_LATEST_URL=https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 MINIFORGE_LATEST_URL=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
@@ -32,11 +31,6 @@ wget $MINIFORGE_LATEST_URL -O $HOME/miniforge.sh \
  && $HOME/miniconda/bin/conda config --set always_yes yes --set changeps1 no \
  && $HOME/miniconda/bin/conda update -q -y conda \
  && rm -f $HOME/miniforge.sh
-
-# wget $MINICONDA_LATEST_URL -O $HOME/miniconda.sh \
-#     && bash $HOME/miniconda.sh -b -p $HOME/miniconda \
-#     && rm -f $HOME/miniconda.sh \
-#     && $HOME/miniconda/bin/conda init zsh
 
 $HOME/miniconda/bin/conda install -c conda-forge -y mamba
 
@@ -93,11 +87,6 @@ curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearm
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list && \
 sudo apt update && \
 sudo apt install -y just
-
-# Install Ruby and Jekyll (for Blog!)
-# Ref: https://jekyllrb.com/
-sudo apt-get install -y ruby-full && \
-gem install bundler jekyll && \
 
 # Install SOPS.
 SOPS_LATEST_VERSION=$(curl -s "https://api.github.com/repos/mozilla/sops/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
