@@ -1,3 +1,4 @@
+# JIRA TICKETING
 if grep -q WSL /proc/version; then
     # If we're running WSL.
     alias jira="cat ~/.jiratemplate | clip.exe"
@@ -5,9 +6,11 @@ if grep -q WSL /proc/version; then
     alias blog="cat ~/.blogtemplate | clip.exe"
 fi
 
-# General aliases, regardless of OS.
+# KUBERNETES
 alias k="kubectl"
 
+
+# DOCKER + KUBERNETES
 nuke_k8s() {
     k3d cluster delete --all
 }
@@ -21,10 +24,17 @@ nuke_docker() {
 
 alias nuke="nuke_docker;nuke_k8s;"
 
+# TERRAFORM
 alias tfp="terraform plan"
 alias tfa="terraform apply -auto-approve"
 alias tfd="terraform destroy -auto-approve"
 
+# PYTHON
+alias pytemplate='cookiecutter ssh://git@github.com/jsal13/cookiecutter-dstemplate.git'
+
+
+# MISC 
 alias bat='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
 alias notes='vi ~/refs/notes.md'
-alias pytemplate='cookiecutter ssh://git@github.com/jsal13/cookiecutter-dstemplate.git'
+
+
