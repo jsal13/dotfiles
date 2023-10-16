@@ -1,13 +1,9 @@
 # Env Variables
 source ~/.env
-plugins=(git docker)
+plugins=(aliases docker git gitignore terraform)
 
 source $ZSH/oh-my-zsh.sh 
 source ~/.aliases
-
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
 
 # Make pressing "up" cycle through matching unix commands.
 autoload -U up-line-or-beginning-search

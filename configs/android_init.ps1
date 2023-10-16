@@ -1,32 +1,34 @@
 $baseurl = "https://play.google.com/store/apps/details?id="
 
 $apps = @(
-    "com.bereal.ft", 
-    "com.x8bit.bitwarden",
-    "jp.co.canon.ic.cameraconnect"
-    "com.shc.chi",
-    "com.ctatracker.chicagotransitcta",
-    "sp0n.citizen",
-    "com.fandom.playercompanion",
-    "com.discord",
-    "com.motivateco.chicagoapp",
-    "com.personalcapital.pcapandroid",
-    "com.devhd.feedly",
     "co.hinge.app",
-    "com.instagram.android",
-    "com.lemonadeinc.lemonade",
-    "me.lyft.android",
+    "com.authy.authy",
     "com.azure.authenticator",
+    "com.bereal.ft", 
+    "com.ctatracker.chicagotransitcta",
+    "com.devhd.feedly",
+    "com.discord",
+    "com.fandom.playercompanion",
+    "com.instagram.android",
+    "com.instagram.barcelona",
+    "com.lemonadeinc.lemonade",
+    "com.motivateco.chicagoapp",
     "com.myfitnesspal.android",
     "com.payrange.payrange",
+    "com.personalcapital.pcapandroid",
     "com.reddit.frontpage",
     "com.starbucks.mobilecard",
-    "com.instagram.barcelona",
     "com.tinder",
+    "com.trainerize.chicagoathleticclub",
     "com.venmo",
     "com.ventrachicago.riderapp",
     "com.weather.forecast.weatherchannel",
     "com.whatsapp"
+    "com.x8bit.bitwarden",
+    "jp.co.canon.ic.cameraconnect"
+    "me.lyft.android",
+    "notion.id",
+    "sp0n.citizen",
 )
 
 foreach ($app in $apps) {
