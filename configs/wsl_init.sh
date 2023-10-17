@@ -97,7 +97,7 @@ sudo apt install -y just
 # Install Ruby and Jekyll (for Blog!)
 # Ref: https://jekyllrb.com/
 sudo apt-get install -y ruby-full && \
-gem install bundler jekyll && \
+gem install bundler jekyll
 
 # Install SOPS.
 SOPS_LATEST_VERSION=$(curl -s "https://api.github.com/repos/mozilla/sops/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
