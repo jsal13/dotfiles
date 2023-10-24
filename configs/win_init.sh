@@ -69,6 +69,7 @@ choco install -y `
     lightshot `
     notion `
     obs-studio `
+    plex `
     powertoys `
     screentogif `
     slack `
