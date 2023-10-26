@@ -6,36 +6,43 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # POWERSHELL ADMIN (New Window):
 # Gets rid of a lot of Windows crufty unnecessary packages.
 # Run get-appxpackage | format-table -autosize -property PackageFamilyName and compare unwanted packages to this.
-Get-AppxPackage *BingNews* | Remove-AppxPackage
-Get-AppxPackage *BingWeather* | Remove-AppxPackage
-Get-AppxPackage *GetHelp* | Remove-AppxPackage
-Get-AppxPackage *Getstarted* | Remove-AppxPackage
-Get-AppxPackage *Messaging* | Remove-AppxPackage
-Get-AppxPackage *Microsoft3DViewer* | Remove-AppxPackage
-Get-AppxPackage *MicrosoftOfficeHub* | Remove-AppxPackage
-Get-AppxPackage *MicrosoftSolitaireCollection* | Remove-AppxPackage
-Get-AppxPackage *MicrosoftStickyNotes* | Remove-AppxPackage
-Get-AppxPackage *MicrosoftTeams* | Remove-AppxPackage
-Get-AppxPackage *MixedReality.Portal* | Remove-AppxPackage
-Get-AppxPackage *Office.OneNote* | Remove-AppxPackage
-Get-AppxPackage *OneConnect* | Remove-AppxPackage
-Get-AppxPackage *OneDriveSync* | Remove-AppxPackage
-Get-AppxPackage *Print3D* | Remove-AppxPackage
-Get-AppxPackage *SkypeApp* | Remove-AppxPackage
-Get-AppxPackage *Wallet* | Remove-AppxPackage
-Get-AppxPackage *WindowsAlarms* | Remove-AppxPackage
-Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
-Get-AppxPackage *WindowsFeedbackHub* | Remove-AppxPackage
-Get-AppxPackage *WindowsMaps* | Remove-AppxPackage
-Get-AppxPackage *WindowsSoundRecorder* | Remove-AppxPackage
-Get-AppxPackage *XboxApp* | Remove-AppxPackage
-Get-AppxPackage *XboxGameOverlay* | Remove-AppxPackage
-Get-AppxPackage *XboxGamingOverlay* | Remove-AppxPackage
-Get-AppxPackage *XboxIdentityProvider* | Remove-AppxPackage
-Get-AppxPackage *XboxSpeechToTextOverlay* | Remove-AppxPackage
-Get-AppxPackage *YourPhone* | Remove-AppxPackage
-Get-AppxPackage *ZuneMusic* | Remove-AppxPackage
-Get-AppxPackage *ZuneVideo* | Remove-AppxPackage
+$apps = @(
+    "*BingNews*",
+    "*BingWeather*",
+    "*GetHelp*",
+    "*Getstarted*",
+    "*Messaging*",
+    "*Microsoft3DViewer*",
+    "*MicrosoftOfficeHub*",
+    "*MicrosoftSolitaireCollection*",
+    "*MicrosoftStickyNotes*",
+    "*MicrosoftTeams*",
+    "*MixedReality.Portal*",
+    "*Office.OneNote*",
+    "*OneConnect*",
+    "*OneDriveSync*",
+    "*Print3D*",
+    "*SkypeApp*",
+    "*Wallet*",
+    "*WindowsAlarms*",
+    "*windowscommunicationsapps*",
+    "*WindowsFeedbackHub*",
+    "*WindowsMaps*",
+    "*WindowsSoundRecorder*",
+    "*XboxApp*",
+    "*XboxGameOverlay*",
+    "*XboxGamingOverlay*",
+    "*XboxIdentityProvider*",
+    "*XboxSpeechToTextOverlay*",
+    "*YourPhone*",
+    "*ZuneMusic*",
+    "*ZuneVideo*"
+)
+
+foreach ($app in $apps) {
+    & Get-AppxPackage "${app}" | Remove-AppxPackage
+}
+
 
 # ---
 # POWERSHELL ADMIN (New Window):
@@ -62,6 +69,7 @@ choco install -y `
     lightshot `
     notion `
     obs-studio `
+    plex `
     powertoys `
     screentogif `
     slack `
@@ -79,6 +87,7 @@ choco install -y `
 # ---
 # POWERSHELL NON-ADMIN
 # For VSCode only, don't install if you don't use VSCode.
+<<<<<<< HEAD
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension formulahendry.code-runner
 code --install-extension hashicorp.terraform
@@ -102,3 +111,32 @@ code --install-extension tamasfe.even-better-toml
 code --install-extension Vue.volar
 code --install-extension Vue.vscode-typescript-vue-plugin
 code --install-extension yzhang.markdown-all-in-on
+=======
+$apps = @(
+    "DavidAnson.vscode-markdownlint",
+    "formulahendry.code-runner",
+    "hashicorp.terraform",
+    "ms-azuretools.vscode-docker",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "ms-python.black-formatter",
+    "ms-python.isort",
+    "ms-python.python",
+    "ms-python.mypy-type-checker",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.jupyter-keymap",
+    "ms-toolsai.jupyter-renderers",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-toolsai.vscode-jupyter-slideshow",
+    "ms-vscode.powershell",
+    "njpwerner.autodocstring",
+    "skellock.just",
+    "tamasfe.even-better-toml",
+    "Yummygum.city-lights-theme",
+    "yzhang.markdown-all-in-one"
+)
+
+foreach ($app in $apps) {
+    & code --install-extension "${app}"
+}
+>>>>>>> 76c939cd7b6c76b07840d40fc3c3ad70538150b1

@@ -2,6 +2,7 @@ $baseurl = "https://play.google.com/store/apps/details?id="
 
 $apps = @(
     "co.hinge.app",
+    "com.aspiro.tidal",
     "com.authy.authy",
     "com.azure.authenticator",
     "com.bereal.ft", 
@@ -9,6 +10,7 @@ $apps = @(
     "com.devhd.feedly",
     "com.discord",
     "com.fandom.playercompanion",
+    "com.fitbit.FitbitMobile",
     "com.instagram.android",
     "com.instagram.barcelona",
     "com.lemonadeinc.lemonade",

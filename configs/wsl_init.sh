@@ -88,8 +88,16 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring
 sudo apt update && \
 sudo apt install -y just
 
+<<<<<<< HEAD
+=======
+# Install Ruby and Jekyll (for Blog!)
+# Ref: https://jekyllrb.com/
+sudo apt-get install -y ruby-full && \
+gem install bundler jekyll
+
+>>>>>>> 76c939cd7b6c76b07840d40fc3c3ad70538150b1
 # Install SOPS.
-SOPS_LATEST_VERSION=$(curl -s "https://api.github.com/repos/mozilla/sops/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
+SOPS_LATEST_VERSION=$(curl -Ls "https://api.github.com/repos/mozilla/sops/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
 curl -Lo sops.deb "https://github.com/mozilla/sops/releases/latest/download/sops_${SOPS_LATEST_VERSION}_amd64.deb" && \
 sudo apt --fix-broken install ./sops.deb && \
 rm -rf sops.deb
