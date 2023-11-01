@@ -94,6 +94,13 @@ curl -Lo sops.deb "https://github.com/mozilla/sops/releases/latest/download/sops
 sudo apt --fix-broken install ./sops.deb && \
 rm -rf sops.deb
 
+# Terraformer
+# https://github.com/GoogleCloudPlatform/terraformer/tree/master
+export PROVIDER=all
+curl -LO "https://github.com/GoogleCloudPlatform/terraformer/releases/download/$(curl -s https://api.github.com/repos/GoogleCloudPlatform/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-${PROVIDER}-linux-amd64"
+chmod +x terraformer-${PROVIDER}-linux-amd64
+sudo mv terraformer-${PROVIDER}-linux-amd64 /usr/local/bin/terraformer
+
 # Install NVM.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 . ~/.zshrc  # Command alias refresh.
