@@ -101,6 +101,9 @@ curl -LO "https://github.com/GoogleCloudPlatform/terraformer/releases/download/$
 chmod +x terraformer-${PROVIDER}-linux-amd64
 sudo mv terraformer-${PROVIDER}-linux-amd64 /usr/local/bin/terraformer
 
+# DVC
+pip install dvc
+
 # Install NVM.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 . ~/.zshrc  # Command alias refresh.
