@@ -29,28 +29,3 @@ This directory is maintained as a [dotfile](https://www.webpro.nl/articles/getti
 
 Use `git add -f (your file/dir)`.
 
-## Tree Structure
-
-```text
-.
-├── .aliases
-├── .env
-├── .config
-│   └── pypoetry
-├── .gitconfig
-├── .github_pr_template
-├── .gitignore
-├── .jiratemplate
-├── .oh-my-zsh
-├── .tmux.conf
-├── .zshrc
-├── README.md
-├── configs
-│   ├── ConEmu.xml
-│   ├── Microsoft.PowerShell_profile.ps1
-│   ├── settings.json
-│   ├── win_init.sh
-│   └── wsl_init.sh
-├── miniconda
-└── repos
-```
