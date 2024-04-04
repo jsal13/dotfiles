@@ -5,7 +5,6 @@ $apps = @(
     "com.aspiro.tidal",
     "com.authy.authy",
     "com.azure.authenticator",
-    "com.bereal.ft", 
     "com.ctatracker.chicagotransitcta",
     "com.devhd.feedly",
     "com.discord",

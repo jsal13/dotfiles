@@ -1,17 +1,21 @@
-## Description
+# Information
 
+## Description
 
 ## Value Statement
 
+_Who is this valuable to, what metric of value are we using?_
 
 ## Stakeholders
 
-
 ## Acceptance Criteria
 
+This ticket is able to be closed when:
+
+    - ...
+    - Stakeholder approves change.
+    - Testing has been created and run.
 
 ## Approach
 
-
 ## Notes
-

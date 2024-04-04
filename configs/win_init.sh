@@ -89,6 +89,7 @@ choco install -y `
 # For VSCode only, don't install if you don't use VSCode.
 $apps = @(
     "DavidAnson.vscode-markdownlint",
+    "aaron-bond.better-comments"
     "formulahendry.code-runner",
     "hashicorp.terraform",
     "ms-azuretools.vscode-docker",
@@ -108,6 +109,7 @@ $apps = @(
     "redhat.vscode-yaml",
     "skellock.just",
     "tamasfe.even-better-toml",
+    "usernamehw.errorlens"
     "Vue.volar",
     "Vue.vscode-typescript-vue-plugin",
     "Yummygum.city-lights-theme",

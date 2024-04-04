@@ -56,7 +56,6 @@
   "editor.insertSpaces": true,
   "editor.largeFileOptimizations": true,
   "editor.letterSpacing": 0,
-  "editor.lightbulb.enabled": true,
   "editor.lineHeight": 0,
   "editor.lineNumbers": "on",
   "editor.links": true,
@@ -68,7 +67,7 @@
   "editor.mouseWheelScrollSensitivity": 1,
   "editor.mouseWheelZoom": false,
   "editor.multiCursorMergeOverlapping": true,
-  "editor.occurrencesHighlight": true,
+  "editor.occurrencesHighlight": "singleFile",
   "editor.overviewRulerBorder": true,
   "editor.parameterHints.cycle": false,
   "editor.parameterHints.enabled": true,
@@ -100,13 +99,12 @@
   "editor.tokenColorCustomizations": {},
   "editor.trimAutoWhitespace": true,
   "editor.useTabStops": true,
-  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
   "editor.wrappingIndent": "same",
   "scm.alwaysShowActions": false,
   "scm.diffDecorations": "all",
   "scm.diffDecorationsGutterWidth": 3,
-  "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {},
   "workbench.commandPalette.history": 50,
   "workbench.commandPalette.preserveInput": false,
@@ -122,7 +120,7 @@
   "workbench.editor.restoreViewState": true,
   "workbench.editor.revealIfOpen": false,
   "workbench.editor.showIcons": true,
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.editor.tabCloseButton": "right",
   "workbench.editor.tabSizing": "fit",
   "workbench.enableExperiments": true,
@@ -170,7 +168,6 @@
   "zenMode.fullScreen": true,
   "zenMode.hideActivityBar": true,
   "zenMode.hideStatusBar": true,
-  "zenMode.hideTabs": true,
   "zenMode.restore": false,
   "explorer.autoReveal": true,
   "explorer.confirmDelete": true,
@@ -484,7 +481,6 @@
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cwd": "",
   "terminal.integrated.drawBoldTextInBrightColors": true,
-  "terminal.integrated.enableBell": false,
   "terminal.integrated.env.linux": {},
   "terminal.integrated.env.osx": {},
   "terminal.integrated.env.windows": {},
@@ -550,29 +546,6 @@
   "python.formatting.provider": "black",
   "python.formatting.yapfArgs": [],
   "python.globalModuleInstallation": false,
-  "python.linting.banditArgs": [],
-  "python.linting.banditEnabled": false,
-  "python.linting.flake8Args": [],
-  "python.linting.flake8CategorySeverity.E": "Error",
-  "python.linting.flake8CategorySeverity.F": "Error",
-  "python.linting.flake8CategorySeverity.W": "Warning",
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py"
-  ],
-  "python.linting.maxNumberOfProblems": 100,
-  "python.linting.prospectorArgs": [],
-  "python.linting.prospectorEnabled": false,
-  "python.linting.pydocstyleArgs": [],
-  "python.linting.pylamaArgs": [],
-  "python.linting.pylamaEnabled": false,
-  "python.linting.pylintArgs": [],
-  "python.linting.pylintCategorySeverity.convention": "Information",
-  "python.linting.pylintCategorySeverity.error": "Error",
-  "python.linting.pylintCategorySeverity.fatal": "Error",
-  "python.linting.pylintCategorySeverity.refactor": "Hint",
-  "python.linting.pylintCategorySeverity.warning": "Warning",
-  "python.sortImports.args": [],
   "python.terminal.activateEnvironment": true,
   "python.terminal.executeInFileDir": false,
   "python.terminal.launchArgs": [],
@@ -615,7 +588,7 @@
   "git.ignoreLegacyWarning": false,
   "git.ignoreLimitWarning": false,
   "git.ignoreMissingGitWarning": false,
-  "git.inputValidation": "warn",
+  "git.inputValidation": true,
   "git.inputValidationLength": 72,
   "git.openDiffOnClick": true,
   "git.postCommitCommand": "none",
@@ -639,7 +612,7 @@
   "editor.bracketPairColorization.enabled": true,
   "terminal.integrated.inheritEnv": false,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -649,8 +622,6 @@
   "security.workspace.trust.enabled": false,
   "git.openRepositoryInParentFolders": "never",
   "editor.language.brackets": [],
-  "window.zoomLevel": 2,
-  "python.linting.mypyArgs": [],
   "python.testing.pytestEnabled": true,
   "autoDocstring.startOnNewLine": true,
   "mypy-type-checker.path": [
@@ -664,10 +635,16 @@
         "sup",
         "a",
         "details",
-        "summary"
+        "summary",
+        "figcaption",
+        "figure",
+        "img",
+        "em",
+        "b"
       ]
     },
-    "MD024": false
+    "MD024": false,
+    "MD046": false
   },
   "markdown.extension.list.toggle.candidate-markers": [
     "-",
@@ -675,5 +652,16 @@
     "+",
     "1.",
     "1)"
-  ]
+  ],
+  "zenMode.showTabs": "single",
+  "editor.indentSize": "tabSize",
+  "workbench.editor.tabActionLocation": "right",
+  "remote.autoForwardPortsSource": "hybrid",
+  "window.zoomLevel": 2,
+  "python.defaultInterpreterPath": "C:\\Users\\james\\.venv",
+  "accessibility.signals.terminalBell": {
+    "sound": "off"
+  },
+  "terminal.integrated.enableVisualBell": false,
+  "workbench.editor.empty.hint": "hidden"
 }
