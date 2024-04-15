@@ -38,3 +38,4 @@ export NVM_DIR="$HOME/.nvm"
 # export CUDA_HOME=/usr/local/cuda
 # export LIBRARY_PATH="${CUDA_HOME}/lib64"
 # export C_INCLUDE_PATH="${CUDA_HOME}/include"
+

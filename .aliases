@@ -24,5 +24,9 @@ nuke_docker() {
 
 alias nuke="nuke_docker;nuke_k8s;"
 
+# PYTHON
+alias venv="source .venv/bin/activate"
+
 # MISC 
 alias bat='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
+
