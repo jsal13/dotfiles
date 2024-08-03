@@ -36,3 +36,13 @@ export NVM_DIR="$HOME/.nvm"
 # export LIBRARY_PATH="${CUDA_HOME}/lib64"
 # export C_INCLUDE_PATH="${CUDA_HOME}/include"
 
+# Git prompt settings
+# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{%F{075}%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}Δ%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}Δ%{$reset_color%}"
+
+PROMPT='
+%B%F{074}%~%f%b $(git_prompt_info)
+> '
