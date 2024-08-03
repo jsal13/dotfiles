@@ -45,4 +45,4 @@ ZSH_THEME_GIT_PROMPT_CLEAN=" %{%F{115}%}Δ%{$reset_color%}"
 
 PROMPT='
 %B%F{074}%~%f%b $(git_prompt_info)
-> '
+%B%F{074}▶%f%b '
