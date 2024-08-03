@@ -40,8 +40,8 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{%F{075}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}Δ%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}Δ%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{167}%}Δ%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{%F{078}%}Δ%{$reset_color%}"
 
 PROMPT='
 %B%F{074}%~%f%b $(git_prompt_info)
