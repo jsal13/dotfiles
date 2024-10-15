@@ -1,6 +1,6 @@
 # Env Variables
 source ~/.env
-plugins=(aliases docker git gitignore terraform)
+plugins=(aliases asdf docker git gitignore terraform)
 
 source $ZSH/oh-my-zsh.sh 
 source ~/.aliases
