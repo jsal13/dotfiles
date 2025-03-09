@@ -1,6 +1,6 @@
 # Env Variables
 source ~/.env
-plugins=(aliases docker git gitignore terraform)
+plugins=(aliases asdf docker git gitignore terraform)
 
 source $ZSH/oh-my-zsh.sh 
 source ~/.aliases
@@ -35,6 +35,17 @@ export NVM_DIR="$HOME/.nvm"
 # export CUDA_HOME=/usr/local/cuda
 # export LIBRARY_PATH="${CUDA_HOME}/lib64"
 # export C_INCLUDE_PATH="${CUDA_HOME}/include"
+
+# Git prompt settings
+# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{%F{075}%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{167}%}Δ%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{%F{115}%}Δ%{$reset_color%}"
+
+PROMPT='
+%B%F{074}%~%f%b $(git_prompt_info)
+%B%F{074}▶%f%b '
 
 # Function to display a random daily goal from external file
 function daily_goal() {

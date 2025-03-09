@@ -30,3 +30,7 @@ alias venv="source .venv/bin/activate"
 # MISC 
 alias bat='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
 
+# Use codegen in dbt.
+gen_yaml () {
+    dbt run-operation generate_model_yaml --args "{'model_names': ['$1'], 'upstream_descriptions': True}"
+}
