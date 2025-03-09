@@ -28,9 +28,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Make poetry do local venvs.
-poetry config virtualenvs.in-project true
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -39,3 +36,20 @@ export NVM_DIR="$HOME/.nvm"
 # export LIBRARY_PATH="${CUDA_HOME}/lib64"
 # export C_INCLUDE_PATH="${CUDA_HOME}/include"
 
+# Function to display a random daily goal from external file
+function daily_goal() {
+    goals_file="$HOME/.daily_goals"
+    if [[ ! -f "$goals_file" ]]; then
+        echo "Daily goals file not found: $goals_file"
+        return 1
+    fi
+    
+    # Count the number of lines (goals) in the file,
+    # get a random line, extract the line, and print.
+    num_goals=$(wc -l < "$goals_file")
+    #random_line=$((RANDOM % num_goals + 1))
+    random_line=$(($(date +%j) % num_goals))
+    random_goal=$(sed -n "${random_line}p" "$goals_file")
+    echo "🐛 \033[1;36m$random_goal\033[0m"
+}
+daily_goal
